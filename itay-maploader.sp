@@ -16,7 +16,7 @@ public Plugin myinfo =
     name = "itay-maploader",
     author = "itay & Antigravity",
     description = "Downloads maps from FastDL using Linux curl (Stable)",
-    version = "1.7",
+    version = "1.8",
     url = ""
 };
 
@@ -364,7 +364,7 @@ void DecompressMap(int client, const char[] mapname, const char[] bz2Path)
 
     // CD into the maps directory and run bzip2 -dskf (decompress, small memory, keep, force)
     char command[1024];
-    Format(command, sizeof(command), "cd \"%s\" && bzip2 -dskf \"%s\" 2>&1", dir, file);
+    Format(command, sizeof(command), "cd \"%s\" && bzip2 -dsf \"%s\" 2>&1", dir, file);
     
     DataPack pack = new DataPack();
     pack.WriteCell(client ? GetClientUserId(client) : 0);
