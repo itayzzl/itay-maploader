@@ -22,7 +22,6 @@ public Plugin myinfo =
 
 public void OnPluginStart()
 {
-    LoadTranslations("itay_messages.phrases");
     g_cvFastDLURL = CreateConVar("itay_maploader_url", "https://main.fastdl.me/maps/", "Base URL for FastDL maps folder");
     g_cvMapsPath = CreateConVar("itay_maploader_path", "", "Absolute path to maps folder (e.g. /home/server/cstrike/maps/). Empty = auto.");
     
