@@ -32,7 +32,7 @@ chmod -R 777 /YOUR/ACTUAL/SERVER/PATH/cstrike/maps
 ```
 
 ### 2. Identifying your Path
-The path `/home/cssserver/serverfiles/cstrike/maps` shown in examples is only a placeholder. To find your actual path, you can run the `pwd` command in your terminal while inside your maps folder, or use the `sm_mapdebug` command in-game after the plugin is loaded.
+The path `/YOUR/ACTUAL/SERVER/PATH/cstrike/maps` shown in examples is only a placeholder. To find your actual path, you can run the `pwd` command in your terminal while inside your maps folder, or use the `sm_mapdebug` command in-game after the plugin is loaded.
 
 ### 3. Verification
 Once you have set the permissions, run this command in your game console (as a Root Admin):
