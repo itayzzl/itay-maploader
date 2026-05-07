@@ -66,12 +66,24 @@ public Action Command_GetMap(int client, int args)
     if (args < 1)
     {
         ReplyToCommand(client, "[itay-maploader] Usage: sm_getmap <mapname>");
+        ReplyToCommand(client, "[itay-maploader] Note: Map name must match FastDL EXACTLY (case-sensitive).");
         return Plugin_Handled;
     }
 
     char mapname[128];
     GetCmdArg(1, mapname, sizeof(mapname));
     
+    // Validate map name (No spaces or illegal characters)
+    for (int i = 0; i < strlen(mapname); i++)
+    {
+        if (mapname[i] == ' ' || mapname[i] == '/' || mapname[i] == '\\' || mapname[i] == ':')
+        {
+            if (client) CPrintToChat(client, "{red}Error: {lightgrey}Invalid map name. No spaces or slashes allowed.");
+            return Plugin_Handled;
+        }
+    }
+    
+    CPrintToChat(client, "{orange}Requesting: {lightgrey}%s (Case-sensitive)...", mapname);
     DownloadMap(client, mapname, true);
     return Plugin_Handled;
 }
