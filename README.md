@@ -49,7 +49,7 @@ The plugin generates a config file in cfg/sourcemod/itay-maploader.cfg:
 | ConVar | Default | Description |
 | :--- | :--- | :--- |
 | itay_maploader_url | http://main.fastdl.me/maps/ | The base URL of your FastDL maps folder. |
-| itay_maploader_path | "" | The absolute path to your maps folder. Leave empty for auto-detection. |
+| itay_maploader_path | "" | The **absolute path** to your maps folder (e.g., /home/USER/server/cstrike/maps/). **You MUST use your own unique path here.** |
 
 ## Diagnostic Commands
 - sm_getmap <mapname>: Manually trigger a download.
